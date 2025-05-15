@@ -1,0 +1,804 @@
+-- Inserção de cargos
+INSERT INTO cargo (descricao, salario_base) VALUES
+('Gerente de Vendas', 7500.00),
+('Supervisor de Atendimento', 5800.00),
+('Consultor de Vendas Sênior', 4500.00),
+('Consultor de Vendas Pleno', 3800.00),
+('Consultor de Vendas Júnior', 3000.00),
+('Atendente de Loja Sênior', 2800.00),
+('Atendente de Loja', 2400.00),
+('Caixa Supervisor', 3200.00),
+('Caixa', 2200.00),
+('Auxiliar de Atendimento', 1900.00);
+
+-- Inserção de lojas
+INSERT INTO loja (nome, cidade, estado) VALUES
+('Café Brasil Centro', 'São Paulo', 'SP'),
+('Café Brasil Paulista', 'São Paulo', 'SP'),
+('Café Brasil Ipiranga', 'São Paulo', 'SP'),
+('Café Brasil Tatuapé', 'São Paulo', 'SP'),
+('Café Brasil Moema', 'São Paulo', 'SP'),
+('Café Brasil Ipanema', 'Rio de Janeiro', 'RJ'),
+('Café Brasil Copacabana', 'Rio de Janeiro', 'RJ'),
+('Café Brasil Leblon', 'Rio de Janeiro', 'RJ'),
+('Café Brasil Barra', 'Rio de Janeiro', 'RJ'),
+('Café Brasil Tijuca', 'Rio de Janeiro', 'RJ'),
+('Café Brasil Savassi', 'Belo Horizonte', 'MG'),
+('Café Brasil Lourdes', 'Belo Horizonte', 'MG'),
+('Café Brasil Sion', 'Belo Horizonte', 'MG'),
+('Café Brasil Pampulha', 'Belo Horizonte', 'MG'),
+('Café Brasil Centro BH', 'Belo Horizonte', 'MG'),
+('Café Brasil Batel', 'Curitiba', 'PR'),
+('Café Brasil Centro CWB', 'Curitiba', 'PR'),
+('Café Brasil Santa Felicidade', 'Curitiba', 'PR'),
+('Café Brasil Água Verde', 'Curitiba', 'PR'),
+('Café Brasil Cabral', 'Curitiba', 'PR'),
+('Café Brasil Moinhos', 'Porto Alegre', 'RS'),
+('Café Brasil Centro POA', 'Porto Alegre', 'RS'),
+('Café Brasil Bela Vista', 'Porto Alegre', 'RS'),
+('Café Brasil Petrópolis', 'Porto Alegre', 'RS'),
+('Café Brasil Menino Deus', 'Porto Alegre', 'RS'),
+('Café Brasil Asa Sul', 'Brasília', 'DF'),
+('Café Brasil Asa Norte', 'Brasília', 'DF'),
+('Café Brasil Lago Sul', 'Brasília', 'DF'),
+('Café Brasil Sudoeste', 'Brasília', 'DF'),
+('Café Brasil Águas Claras', 'Brasília', 'DF'),
+('Café Brasil Pelourinho', 'Salvador', 'BA'),
+('Café Brasil Pituba', 'Salvador', 'BA'),
+('Café Brasil Rio Vermelho', 'Salvador', 'BA'),
+('Café Brasil Barra', 'Salvador', 'BA'),
+('Café Brasil Ondina', 'Salvador', 'BA'),
+('Café Brasil Boa Viagem', 'Recife', 'PE'),
+('Café Brasil Casa Forte', 'Recife', 'PE'),
+('Café Brasil Recife Antigo', 'Recife', 'PE'),
+('Café Brasil Pina', 'Recife', 'PE'),
+('Café Brasil Cordeiro', 'Recife', 'PE'),
+('Café Brasil Beira Mar', 'Fortaleza', 'CE'),
+('Café Brasil Aldeota', 'Fortaleza', 'CE'),
+('Café Brasil Meireles', 'Fortaleza', 'CE'),
+('Café Brasil Benfica', 'Fortaleza', 'CE'),
+('Café Brasil Dionísio Torres', 'Fortaleza', 'CE'),
+('Café Brasil Manauara', 'Manaus', 'AM'),
+('Café Brasil Centro', 'Manaus', 'AM'),
+('Café Brasil Ponta Negra', 'Natal', 'RN'),
+('Café Brasil Capim Macio', 'Natal', 'RN'),
+('Café Brasil Tirol', 'Natal', 'RN');
+
+-- Inserção de categorias de produto
+INSERT INTO categoria_produto (nome, descricao) VALUES
+('Cafés Especiais', 'Cafés de origem única e alta qualidade'),
+('Cafés Tradicionais', 'Cafés blends tradicionais brasileiros'),
+('Cafés Gelados', 'Bebidas geladas à base de café'),
+('Cappuccinos', 'Café com leite vaporizado e espuma de leite'),
+('Lattes', 'Café com leite vaporizado em diferentes sabores'),
+('Mochas', 'Café combinado com chocolate'),
+('Chás Premium', 'Chás especiais de diversas procedências'),
+('Chás Tradicionais', 'Chás clássicos e infusões'),
+('Chocolate Quente', 'Bebidas à base de chocolate'),
+('Sucos Naturais', 'Sucos frescos de frutas da estação'),
+('Águas e Refrigerantes', 'Águas minerais e refrigerantes'),
+('Salgados Assados', 'Salgados assados diversos'),
+('Salgados Fritos', 'Salgados fritos crocantes'),
+('Bolos Caseiros', 'Bolos artesanais e caseiros'),
+('Tortas Doces', 'Tortas doces variadas'),
+('Cookies e Biscoitos', 'Biscoitos e cookies artesanais'),
+('Sanduíches Naturais', 'Sanduíches leves e naturais'),
+('Sanduíches Quentes', 'Sanduíches quentes e gratinados'),
+('Saladas Frescas', 'Saladas preparadas na hora'),
+('Pães Especiais', 'Pães artesanais e especiais'),
+('Croissants', 'Croissants doces e salgados'),
+('Granola e Cereais', 'Mixes de granola e cereais'),
+('Iogurtes Naturais', 'Iogurtes naturais e com frutas'),
+('Açaí e Bowl', 'Açaí tradicional e bowls'),
+('Smoothies', 'Bebidas cremosas de frutas'),
+('Vitaminas', 'Vitaminas de frutas com leite'),
+('Cervejas Artesanais', 'Cervejas especiais de microcervejarias'),
+('Vinhos Selecionados', 'Vinhos nacionais e importados'),
+('Espumantes', 'Espumantes e champanhes'),
+('Destilados Premium', 'Whiskeys, gin e outras bebidas destiladas'),
+('Kits Presente', 'Conjuntos para presentear'),
+('Café em Grãos', 'Grãos de café para preparo em casa'),
+('Café Moído', 'Café moído na hora'),
+('Cápsulas de Café', 'Cápsulas compatíveis com máquinas'),
+('Acessórios Café', 'Utensílios para preparo de café'),
+('Canecas Personalizadas', 'Canecas temáticas da marca'),
+('Garrafas Térmicas', 'Garrafas para manter bebidas quentes/frias'),
+('French Press', 'Prensas francesas de diversos tamanhos'),
+('Filtros Permanentes', 'Filtros reutilizáveis para café'),
+('Moedores de Café', 'Moedores elétricos e manuais'),
+('Cafeteiras Elétricas', 'Máquinas de café elétricas'),
+('Kits Degustação', 'Kits para experimentar diferentes cafés'),
+('Subscrição Mensal', 'Assinatura de café especial'),
+('Merchandising', 'Produtos de marca da cafeteria'),
+('Livros sobre Café', 'Livros e manuais sobre cultura do café'),
+('Curso Barista', 'Cursos profissionalizantes'),
+('Workshops', 'Oficinas e workshops temáticos'),
+('Kits Barista', 'Conjuntos completos para baristas'),
+('Edições Limitadas', 'Produtos especiais e colecionáveis'),
+('Presentes Corporativos', 'Kits para presentear empresas');
+
+-- Inserção de produtos
+INSERT INTO produto (nome, id_categoria, preco_unitario) VALUES
+-- Cafés Especiais (1)
+('Café Especial Cerrado Mineiro - 250g', 1, 32.90),
+('Café Especial Mogiana - 250g', 1, 36.50),
+
+-- Cafés Tradicionais (2)
+('Café Tradicional Brasileiro - 500g', 2, 18.90),
+('Café Extra Forte - 500g', 2, 19.50),
+
+-- Cafés Gelados (3)
+('Café Gelado Tradicional 300ml', 3, 12.90),
+('Café Gelado com Leite 300ml', 3, 14.50),
+
+-- Cappuccinos (4)
+('Cappuccino Tradicional 300ml', 4, 14.90),
+('Cappuccino Chocolate 300ml', 4, 16.50),
+
+-- Lattes (5)
+('Latte Tradicional 350ml', 5, 15.90),
+('Latte Baunilha 350ml', 5, 17.50),
+
+-- Mochas (6)
+('Mocha Tradicional 350ml', 6, 18.90),
+('Mocha Caramelo 350ml', 6, 20.50),
+
+-- Chás Premium (7)
+('Chá Verde Jasmine 300ml', 7, 14.90),
+('Chá Preto Earl Grey 300ml', 7, 15.50),
+
+-- Chás Tradicionais (8)
+('Chá de Camomila 300ml', 8, 10.90),
+('Chá de Hortelã 300ml', 8, 10.90),
+
+-- Chocolate Quente (9)
+('Chocolate Quente Tradicional 300ml', 9, 15.90),
+('Chocolate Quente Branco 300ml', 9, 17.50),
+
+-- Sucos Naturais (10)
+('Suco de Laranja Natural 500ml', 10, 12.90),
+('Suco de Abacaxi com Hortelã 500ml', 10, 14.50),
+
+-- Águas e Refrigerantes (11)
+('Água Mineral 500ml', 11, 4.90),
+('Refrigerante Lata 350ml', 11, 6.90),
+
+-- Salgados Assados (12)
+('Pão de Queijo Grande', 12, 8.90),
+('Croissant de Queijo', 12, 9.50),
+
+-- Salgados Fritos (13)
+('Coxinha de Frango', 13, 7.90),
+('Risole de Queijo', 13, 6.50),
+
+-- Bolos Caseiros (14)
+('Bolo de Chocolate Fatia', 14, 12.90),
+('Bolo de Cenoura Fatia', 14, 11.50),
+
+-- Tortas Doces (15)
+('Torta de Maçã Fatia', 15, 15.90),
+('Torta de Limão Fatia', 15, 14.50),
+
+-- Cookies e Biscoitos (16)
+('Cookie Chocolate 80g', 16, 9.90),
+('Biscoito Amanteigado', 16, 7.90),
+
+-- Sanduíches Naturais (17)
+('Sanduíche Natural Integral', 17, 18.90),
+('Sanduíche de Frango Light', 17, 19.50),
+
+-- Sanduíches Quentes (18)
+('Sanduíche de Frango Grelhado', 18, 22.90),
+('Sanduíche Vegetariano', 18, 21.50),
+
+-- Saladas Frescas (19)
+('Salada Caesar', 19, 25.90),
+('Salada Grega', 19, 24.50),
+
+-- Pães Especiais (20)
+('Pão Integral Artesanal', 20, 12.90),
+('Pão de Centeio', 20, 13.50),
+
+-- Croissants (21)
+('Croissant Tradicional', 21, 10.90),
+('Croissant de Chocolate', 21, 12.50),
+
+-- Granola e Cereais (22)
+('Granola Tradicional 200g', 22, 15.90),
+('Mix de Castanhas 150g', 22, 18.90),
+
+-- Iogurtes Naturais (23)
+('Iogurte Natural 200g', 23, 9.90),
+('Iogurte de Frutas Vermelhas 200g', 23, 11.90),
+
+-- Açaí e Bowl (24)
+('Açaí Tradicional 300ml', 24, 18.90),
+('Bowl Energético', 24, 22.90),
+
+-- Smoothies (25)
+('Smoothie de Morango 400ml', 25, 16.90),
+('Smoothie Verde 400ml', 25, 17.90),
+
+-- Vitaminas (26)
+('Vitamina de Banana', 26, 12.90),
+('Vitamina de Morango', 26, 13.50),
+
+-- Cervejas Artesanais (27)
+('Cerveja Artesanal IPA', 27, 18.90),
+('Cerveja Artesanal Pilsen', 27, 16.50),
+
+-- Vinhos Selecionados (28)
+('Vinho Tinto Seco', 28, 25.90),
+('Vinho Branco Seco', 28, 24.50),
+
+-- Espumantes (29)
+('Espumante Nacional', 29, 32.90),
+('Espumante Importado', 29, 45.50),
+
+-- Destilados Premium (30)
+('Whisky Nacional', 30, 65.90),
+('Gin Premium', 30, 58.50),
+
+-- Kits Presente (31)
+('Kit Café da Manhã', 31, 89.90),
+('Kit Degustação de Cafés', 31, 120.00),
+
+-- Café em Grãos (32)
+('Café em Grãos Especial 500g', 32, 45.90),
+('Café em Grãos Tradicional 1kg', 32, 65.50),
+
+-- Café Moído (33)
+('Café Moído Especial 250g', 33, 32.90),
+('Café Moído Tradicional 500g', 33, 42.50),
+
+-- Cápsulas de Café (34)
+('Cápsulas Espressso 10un', 34, 29.90),
+('Cápsulas Lungo 10un', 34, 32.50),
+
+-- Acessórios Café (35)
+('Caneca Café Brasil 350ml', 35, 39.90),
+('French Press 600ml', 35, 129.90),
+
+-- Canecas Personalizadas (36)
+('Caneca Barista Preta', 36, 49.90),
+('Caneca Térmica com Logo', 36, 89.50),
+
+-- Garrafas Térmicas (37)
+('Garrafa Térmica 500ml', 37, 89.50),
+('Garrafa Térmica 750ml', 37, 119.90),
+
+-- French Press (38)
+('Prensa Francesa 350ml', 38, 99.90),
+('Prensa Francesa 800ml', 38, 149.90),
+
+-- Filtros Permanentes (39)
+('Filtro Permanente Aço', 39, 45.90),
+('Filtro Permanente Nylon', 39, 32.50),
+
+-- Moedores de Café (40)
+('Moedor Manual', 40, 159.90),
+('Moedor Elétrico', 40, 289.90),
+
+-- Cafeteiras Elétricas (41)
+('Cafeteira Expresso', 41, 599.90),
+('Cafeteira Cápsulas', 41, 399.90),
+
+-- Kits Degustação (42)
+('Kit 5 Cafés Especiais', 42, 89.90),
+('Kit 3 Cafés Gelados', 42, 65.50),
+
+-- Subscrição Mensal (43)
+('Assinatura Café Mensal', 43, 79.90),
+('Assinatura Premium Trimestral', 43, 229.90),
+
+-- Merchandising (44)
+('Camiseta Café Brasil', 44, 59.90),
+('Ecobag Café Brasil', 44, 39.90),
+
+-- Livros sobre Café (45)
+('Manual do Barista', 45, 89.90),
+('História do Café no Brasil', 45, 65.50),
+
+-- Curso Barista (46)
+('Curso Básico de Barista', 46, 499.90),
+('Workshop de Latte Art', 46, 299.90),
+
+-- Workshops (47)
+('Workshop de Preparo', 47, 199.90),
+('Workshop de Degustação', 47, 159.90),
+
+-- Kits Barista (48)
+('Kit Iniciante Barista', 48, 349.90),
+('Kit Profissional Barista', 48, 899.90),
+
+-- Edições Limitadas (49)
+('Café Edição Especial', 49, 129.90),
+('Kit Colecionador', 49, 199.90),
+
+-- Presentes Corporativos (50)
+('Kit Presente Executivo', 50, 159.90),
+('Cesta Café Premium', 50, 299.90);
+
+-- Inserção de funcionários (com CPFs, telefones e emails únicos)
+INSERT INTO funcionario (nome, cpf, id_cargo, id_loja, data_admissao, telefone, email) VALUES
+('João Silva', '12345678901', 1, 1, '2020-01-15', '(11) 98765-4321', 'joao.silva@cafebrasil.com'),
+('Maria Santos', '23456789012', 2, 1, '2020-02-20', '(11) 98765-4322', 'maria.santos@cafebrasil.com'),
+('Carlos Oliveira', '34567890123', 3, 2, '2020-03-10', '(11) 98765-4323', 'carlos.oliveira@cafebrasil.com'),
+('Ana Pereira', '45678901234', 4, 2, '2020-04-05', '(11) 98765-4324', 'ana.pereira@cafebrasil.com'),
+('Pedro Costa', '56789012345', 5, 3, '2020-05-12', '(11) 98765-4325', 'pedro.costa@cafebrasil.com'),
+('Mariana Rodrigues', '67890123456', 6, 3, '2020-06-18', '(11) 98765-4326', 'mariana.rodrigues@cafebrasil.com'),
+('Lucas Almeida', '78901234567', 7, 4, '2020-07-22', '(11) 98765-4327', 'lucas.almeida@cafebrasil.com'),
+('Juliana Ferreira', '89012345678', 8, 4, '2020-08-30', '(11) 98765-4328', 'juliana.ferreira@cafebrasil.com'),
+('Fernando Souza', '90123456789', 9, 5, '2020-09-14', '(11) 98765-4329', 'fernando.souza@cafebrasil.com'),
+('Patrícia Lima', '01234567890', 10, 5, '2020-10-25', '(11) 98765-4330', 'patricia.lima@cafebrasil.com'),
+
+('Ricardo Gomes', '10234567891', 1, 6, '2020-11-03', '(11) 98765-4331', 'ricardo.gomes@cafebrasil.com'),
+('Amanda Rocha', '12034567892', 2, 6, '2020-12-07', '(11) 98765-4332', 'amanda.rocha@cafebrasil.com'),
+('Bruno Martins', '12304567893', 3, 7, '2021-01-11', '(11) 98765-4333', 'bruno.martins@cafebrasil.com'),
+('Cristina Nunes', '12340567894', 4, 7, '2021-02-09', '(11) 98765-4334', 'cristina.nunes@cafebrasil.com'),
+('Daniel Castro', '12345067895', 5, 8, '2021-03-15', '(11) 98765-4335', 'daniel.castro@cafebrasil.com'),
+('Elaine Dias', '12345607896', 6, 8, '2021-04-20', '(11) 98765-4336', 'elaine.dias@cafebrasil.com'),
+('Fábio Melo', '12345670897', 7, 9, '2021-05-22', '(11) 98765-4337', 'fabio.melo@cafebrasil.com'),
+('Gabriela Pires', '12345678098', 8, 9, '2021-06-28', '(11) 98765-4338', 'gabriela.pires@cafebrasil.com'),
+('Hugo Barbosa', '12345678908', 9, 10, '2021-07-05', '(11) 98765-4339', 'hugo.barbosa@cafebrasil.com'),
+('Isabela Cardoso', '12345678909', 10, 10, '2021-08-12', '(11) 98765-4340', 'isabela.cardoso@cafebrasil.com'),
+
+('José Ribeiro', '22345678901', 1, 11, '2021-09-17', '(11) 98765-4341', 'jose.ribeiro@cafebrasil.com'),
+('Karen Teixeira', '23345678902', 2, 11, '2021-10-23', '(11) 98765-4342', 'karen.teixeira@cafebrasil.com'),
+('Leandro Moreira', '24345678903', 3, 12, '2021-11-30', '(11) 98765-4343', 'leandro.moreira@cafebrasil.com'),
+('Mônica Andrade', '25345678904', 4, 12, '2022-01-04', '(11) 98765-4344', 'monica.andrade@cafebrasil.com'),
+('Nelson Campos', '26345678905', 5, 13, '2022-02-08', '(11) 98765-4345', 'nelson.campos@cafebrasil.com'),
+('Olívia Duarte', '27345678906', 6, 13, '2022-03-14', '(11) 98765-4346', 'olivia.duarte@cafebrasil.com'),
+('Paulo Fonseca', '28345678907', 7, 14, '2022-04-19', '(11) 98765-4347', 'paulo.fonseca@cafebrasil.com'),
+('Queila Ramos', '29345678908', 8, 14, '2022-05-25', '(11) 98765-4348', 'queila.ramos@cafebrasil.com'),
+('Rafael Torres', '30345678909', 9, 15, '2022-06-29', '(11) 98765-4349', 'rafael.torres@cafebrasil.com'),
+('Sandra Moura', '31345678910', 10, 15, '2022-08-03', '(11) 98765-4350', 'sandra.moura@cafebrasil.com'),
+
+('Tiago Lopes', '32345678911', 1, 16, '2022-09-07', '(11) 98765-4351', 'tiago.lopes@cafebrasil.com'),
+('Úrsula Vasques', '33345678912', 2, 16, '2022-10-12', '(11) 98765-4352', 'ursula.vasques@cafebrasil.com'),
+('Vitor Hugo', '34345678913', 3, 17, '2022-11-16', '(11) 98765-4353', 'vitor.hugo@cafebrasil.com'),
+('Wanessa Reis', '35345678914', 4, 17, '2022-12-21', '(11) 98765-4354', 'wanessa.reis@cafebrasil.com'),
+('Xavier Sales', '36345678915', 5, 18, '2023-01-25', '(11) 98765-4355', 'xavier.sales@cafebrasil.com'),
+('Yasmin Cunha', '37345678916', 6, 18, '2023-03-02', '(11) 98765-4356', 'yasmin.cunha@cafebrasil.com'),
+('Zélia Brito', '38345678917', 7, 19, '2023-04-06', '(11) 98765-4357', 'zelia.brito@cafebrasil.com'),
+('André Medeiros', '39345678918', 8, 19, '2023-05-11', '(11) 98765-4358', 'andre.medeiros@cafebrasil.com'),
+('Bianca Neves', '40345678919', 9, 20, '2023-06-15', '(11) 98765-4359', 'bianca.neves@cafebrasil.com'),
+('Caio Peixoto', '41345678920', 10, 20, '2023-07-20', '(11) 98765-4360', 'caio.peixoto@cafebrasil.com'),
+
+('Débora Tavares', '42345678921', 1, 21, '2023-08-24', '(21) 98765-4361', 'debora.tavares@cafebrasil.com'),
+('Eduardo Siqueira', '43345678922', 2, 21, '2023-09-28', '(21) 98765-4362', 'eduardo.siqueira@cafebrasil.com'),
+('Flávia Monteiro', '44345678923', 3, 22, '2023-11-02', '(21) 98765-4363', 'flavia.monteiro@cafebrasil.com'),
+('Gustavo Paiva', '45345678924', 4, 22, '2023-12-07', '(21) 98765-4364', 'gustavo.paiva@cafebrasil.com'),
+('Helena Barcelos', '46345678925', 5, 23, '2024-01-11', '(21) 98765-4365', 'helena.barcelos@cafebrasil.com'),
+('Igor Queiroz', '47345678926', 6, 23, '2024-02-15', '(21) 98765-4366', 'igor.queiroz@cafebrasil.com'),
+('Júlia Pinheiro', '48345678927', 7, 24, '2024-03-21', '(21) 98765-4367', 'julia.pinheiro@cafebrasil.com'),
+('Kleber Dantas', '49345678928', 8, 24, '2024-04-25', '(21) 98765-4368', 'kleber.dantas@cafebrasil.com'),
+('Larissa Macedo', '50345678929', 9, 25, '2024-05-30', '(21) 98765-4369', 'larissa.macedo@cafebrasil.com'),
+('Marcos Valença', '51345678930', 10, 25, '2024-07-04', '(21) 98765-4370', 'marcos.valenca@cafebrasil.com'),
+
+('Nina Fontes', '52345678931', 1, 26, '2024-08-08', '(31) 98765-4371', 'nina.fontes@cafebrasil.com'),
+('Otávio Guedes', '53345678932', 2, 26, '2024-09-12', '(31) 98765-4372', 'otavio.guedes@cafebrasil.com'),
+('Paula Jardim', '54345678933', 3, 27, '2024-10-17', '(31) 98765-4373', 'paula.jardim@cafebrasil.com'),
+('Quintino Braga', '55345678934', 4, 27, '2024-11-21', '(31) 98765-4374', 'quintino.braga@cafebrasil.com'),
+('Rita Câmara', '56345678935', 5, 28, '2024-12-26', '(31) 98765-4375', 'rita.camara@cafebrasil.com'),
+('Sérgio Dutra', '57345678936', 6, 28, '2025-01-30', '(31) 98765-4376', 'sergio.dutra@cafebrasil.com'),
+('Tatiana Eiras', '58345678937', 7, 29, '2025-03-06', '(31) 98765-4377', 'tatiana.eiras@cafebrasil.com'),
+('Ubirajara Fagundes', '59345678938', 8, 29, '2025-04-10', '(31) 98765-4378', 'ubirajara.fagundes@cafebrasil.com'),
+('Vanessa Galvão', '60345678939', 9, 30, '2025-05-15', '(31) 98765-4379', 'vanessa.galvao@cafebrasil.com'),
+('Walter Holanda', '61345678940', 10, 30, '2025-06-19', '(31) 98765-4380', 'walter.holanda@cafebrasil.com'),
+
+('Alice Ilha', '62345678941', 1, 31, '2025-07-24', '(41) 98765-4381', 'alice.ilha@cafebrasil.com'),
+('Bernardo Junqueira', '63345678942', 2, 31, '2025-08-28', '(41) 98765-4382', 'bernardo.junqueira@cafebrasil.com'),
+('Cecília Kiffer', '64345678943', 3, 32, '2025-10-02', '(41) 98765-4383', 'cecilia.kiffer@cafebrasil.com'),
+('Dário Lemos', '65345678944', 4, 32, '2025-11-06', '(41) 98765-4384', 'dario.lemos@cafebrasil.com'),
+('Ester Marques', '66345678945', 5, 33, '2025-12-11', '(41) 98765-4385', 'ester.marques@cafebrasil.com'),
+('Felipe Nóbrega', '67345678946', 6, 33, '2026-01-15', '(41) 98765-4386', 'felipe.nobrega@cafebrasil.com'),
+('Giovana Oliveira', '68345678947', 7, 34, '2026-02-19', '(41) 98765-4387', 'giovana.oliveira@cafebrasil.com'),
+('Heitor Pacheco', '69345678948', 8, 34, '2026-03-26', '(41) 98765-4388', 'heitor.pacheco@cafebrasil.com'),
+('Iara Queirós', '70345678949', 9, 35, '2026-04-30', '(41) 98765-4389', 'iara.queiros@cafebrasil.com'),
+('Joaquim Rangel', '71345678950', 10, 35, '2026-06-04', '(41) 98765-4390', 'joaquim.rangel@cafebrasil.com'),
+
+('Kelly Simões', '72345678951', 1, 36, '2026-07-09', '(51) 98765-4391', 'kelly.simoes@cafebrasil.com'),
+('Leonardo Trindade', '73345678952', 2, 36, '2026-08-13', '(51) 98765-4392', 'leonardo.trindade@cafebrasil.com'),
+('Marina Uchôa', '74345678953', 3, 37, '2026-09-17', '(51) 98765-4393', 'marina.uchoa@cafebrasil.com'),
+('Norberto Viegas', '75345678954', 4, 37, '2026-10-22', '(51) 98765-4394', 'norberto.viegas@cafebrasil.com'),
+('Ofélia Wanderley', '76345678955', 5, 38, '2026-11-26', '(51) 98765-4395', 'ofelia.wanderley@cafebrasil.com'),
+('Pablo Ximenes', '77345678956', 6, 38, '2026-12-31', '(51) 98765-4396', 'pablo.ximenes@cafebrasil.com'),
+('Quésia Yung', '78345678957', 7, 39, '2027-02-04', '(51) 98765-4397', 'quesia.yung@cafebrasil.com'),
+('Renato Zago', '79345678958', 8, 39, '2027-03-11', '(51) 98765-4398', 'renato.zago@cafebrasil.com'),
+('Sofia Abreu', '80345678959', 9, 40, '2027-04-15', '(51) 98765-4399', 'sofia.abreu@cafebrasil.com'),
+('Thiago Bittencourt', '81345678960', 10, 40, '2027-05-20', '(51) 98765-4400', 'thiago.bittencourt@cafebrasil.com'),
+
+('Úrsula Correia', '82345678961', 1, 41, '2027-06-24', '(61) 98765-4401', 'ursula.correia@cafebrasil.com'),
+('Vicente Drumond', '83345678962', 2, 41, '2027-07-29', '(61) 98765-4402', 'vicente.drumond@cafebrasil.com'),
+('Wagner Esteves', '84345678963', 3, 42, '2027-09-02', '(61) 98765-4403', 'wagner.esteves@cafebrasil.com'),
+('Ximena Farias', '85345678964', 4, 42, '2027-10-07', '(61) 98765-4404', 'ximena.farias@cafebrasil.com'),
+('Yago Goulart', '86345678965', 5, 43, '2027-11-11', '(61) 98765-4405', 'yago.goulart@cafebrasil.com'),
+('Zacarias Hipólito', '87345678966', 6, 43, '2027-12-16', '(61) 98765-4406', 'zacarias.hipolito@cafebrasil.com'),
+('Aline Jordão', '88345678967', 7, 44, '2028-01-20', '(61) 98765-4407', 'aline.jordao@cafebrasil.com'),
+('Breno Kruschewsky', '89345678968', 8, 44, '2028-02-24', '(61) 98765-4408', 'breno.kruschewsky@cafebrasil.com'),
+('Cíntia Loureiro', '90345678969', 9, 45, '2028-03-31', '(61) 98765-4409', 'cintia.loureiro@cafebrasil.com'),
+('Dênis Maranhão', '91345678970', 10, 45, '2028-05-05', '(61) 98765-4410', 'denis.maranhao@cafebrasil.com'),
+
+('Elisa Nogueira', '92345678971', 1, 46, '2028-06-09', '(71) 98765-4411', 'elisa.nogueira@cafebrasil.com'),
+('Fabiano Ornellas', '93345678972', 2, 46, '2028-07-14', '(71) 98765-4412', 'fabiano.ornellas@cafebrasil.com'),
+('Geovana Pimentel', '94345678973', 3, 47, '2028-08-18', '(71) 98765-4413', 'geovana.pimentel@cafebrasil.com'),
+('Hélio Quintanilha', '95345678974', 4, 47, '2028-09-22', '(71) 98765-4414', 'helio.quintanilha@cafebrasil.com'),
+('Íris Rocha', '96345678975', 5, 48, '2028-10-27', '(71) 98765-4415', 'iris.rocha@cafebrasil.com'),
+('Jorge Saldanha', '97345678976', 6, 48, '2028-12-01', '(71) 98765-4416', 'jorge.saldanha@cafebrasil.com'),
+('Karina Teles', '98345678977', 7, 49, '2029-01-05', '(71) 98765-4417', 'karina.teles@cafebrasil.com'),
+('Lauro Ururahy', '99345678978', 8, 49, '2029-02-09', '(71) 98765-4418', 'lauro.ururahy@cafebrasil.com'),
+('Mirela Ventura', '00345678979', 9, 50, '2029-03-16', '(71) 98765-4419', 'mirela.ventura@cafebrasil.com'),
+('Nivaldo Wermelinger', '11345678980', 10, 50, '2029-04-20', '(71) 98765-4420', 'nivaldo.wermelinger@cafebrasil.com');
+
+-- Inserção de clientes (com CPFs, telefones e emails únicos)
+INSERT INTO cliente (nome, cpf, data_nascimento, telefone, email) VALUES
+('Ana Clara Almeida', '12345678901', '1985-03-15', '(11) 98765-4321', 'ana.almeida@gmail.com'),
+('Bruno Costa Barros', '23456789012', '1990-07-22', '(11) 98765-4322', 'bruno.barros@gmail.com'),
+('Carlos Daniel Cunha', '34567890123', '1982-11-30', '(11) 98765-4323', 'carlos.cunha@gmail.com'),
+('Daniela Esteves Fernandes', '45678901234', '1995-05-18', '(11) 98765-4324', 'daniela.fernandes@gmail.com'),
+('Eduardo Farias Gomes', '56789012345', '1988-09-12', '(11) 98765-4325', 'eduardo.gomes@gmail.com'),
+('Fernanda Guimarães Henriques', '67890123456', '1993-02-25', '(11) 98765-4326', 'fernanda.henriques@gmail.com'),
+('Gustavo Inácio Júnior', '78901234567', '1980-12-05', '(11) 98765-4327', 'gustavo.junior@gmail.com'),
+('Helena Kátia Lemos', '89012345678', '1998-08-19', '(11) 98765-4328', 'helena.lemos@gmail.com'),
+('Igor Martins Nogueira', '90123456789', '1978-04-30', '(11) 98765-4329', 'igor.nogueira@gmail.com'),
+('Juliana Oliveira Pereira', '01234567890', '2001-06-14', '(11) 98765-4330', 'juliana.pereira@gmail.com'),
+
+('Lucas Quintino Ramos', '10234567891', '1987-01-23', '(11) 98765-4331', 'lucas.ramos@gmail.com'),
+('Mariana Santos Torres', '12034567892', '1996-10-07', '(11) 98765-4332', 'mariana.torres@gmail.com'),
+('Nelson Uchôa Vieira', '12304567893', '1979-07-11', '(11) 98765-4333', 'nelson.vieira@gmail.com'),
+('Olivia Wanda Xavier', '12340567894', '2003-09-28', '(11) 98765-4334', 'olivia.xavier@gmail.com'),
+('Paulo Yuri Zanetti', '12345067895', '1984-03-03', '(11) 98765-4335', 'paulo.zanetti@gmail.com'),
+('Quintino Arnaldo Brito', '12345607896', '2005-12-17', '(11) 98765-4336', 'quintino.brito@gmail.com'),
+('Raquel Beatriz Castro', '12345670897', '1991-05-22', '(11) 98765-4337', 'raquel.castro@gmail.com'),
+('Sérgio Diego Esteves', '12345678098', '1983-08-09', '(11) 98765-4338', 'sergio.esteves@gmail.com'),
+('Tatiana Fonseca Gomes', '12345678908', '2000-11-01', '(11) 98765-4339', 'tatiana.gomes@gmail.com'),
+('Ubirajara Henrique Lima', '12345678909', '1977-02-14', '(11) 98765-4340', 'ubirajara.lima@gmail.com'),
+
+('Vanessa Íris Mendes', '22345678901', '1994-04-26', '(21) 98765-4341', 'vanessa.mendes@gmail.com'),
+('Wagner Jorge Nunes', '23345678902', '1989-07-31', '(21) 98765-4342', 'wagner.nunes@gmail.com'),
+('Ximena Karla Oliveira', '24345678903', '2002-01-15', '(21) 98765-4343', 'ximena.oliveira@gmail.com'),
+('Yago Leandro Pires', '25345678904', '1997-09-08', '(21) 98765-4344', 'yago.pires@gmail.com'),
+('Zélia Mariana Queiroz', '26345678905', '1981-12-21', '(21) 98765-4345', 'zelia.queiroz@gmail.com'),
+('Arthur Nogueira Reis', '27345678906', '2004-06-04', '(21) 98765-4346', 'arthur.reis@gmail.com'),
+('Bianca Patrícia Silva', '28345678907', '1992-03-18', '(21) 98765-4347', 'bianca.silva@gmail.com'),
+('Caio Quintino Tavares', '29345678908', '1986-10-29', '(21) 98765-4348', 'caio.tavares@gmail.com'),
+('Débora Regina Uchôa', '30345678909', '2006-08-12', '(21) 98765-4349', 'debora.uchoa@gmail.com'),
+('Elias Samuel Viana', '31345678910', '1976-05-25', '(21) 98765-4350', 'elias.viana@gmail.com'),
+
+('Flávia Tatiana Wanderley', '32345678911', '1999-02-07', '(31) 98765-4351', 'flavia.wanderley@gmail.com'),
+('Gabriel Umberto Xavier', '33345678912', '1983-11-20', '(31) 98765-4352', 'gabriel.xavier@gmail.com'),
+('Heloísa Vera Yung', '34345678913', '2007-04-03', '(31) 98765-4353', 'heloisa.yung@gmail.com'),
+('Ivan Wilson Zanetti', '35345678914', '1990-09-16', '(31) 98765-4354', 'ivan.zanetti@gmail.com'),
+('Júlia Alice Andrade', '36345678915', '1985-01-29', '(31) 98765-4355', 'julia.andrade@gmail.com'),
+('Kevin Bruno de Castro', '37345678916', '2001-07-12', '(31) 98765-4356', 'kevin.castro@gmail.com'),
+('Larissa Cristina Dias', '38345678917', '1996-12-25', '(31) 98765-4357', 'larissa.dias@gmail.com'),
+('Marcos Daniel Esteves', '39345678918', '1988-05-08', '(31) 98765-4358', 'marcos.esteves@gmail.com'),
+('Nádia Fernanda Farias', '40345678919', '2003-10-21', '(31) 98765-4359', 'nadia.farias@gmail.com'),
+('Otávio Gabriel Gomes', '41345678920', '1979-03-04', '(31) 98765-4360', 'otavio.gomes@gmail.com'),
+
+('Patrícia Helena Inácio', '42345678921', '1994-08-17', '(41) 98765-4361', 'patricia.inacio@gmail.com'),
+('Quiteria Isabela Junqueira', '43345678922', '1987-01-30', '(41) 98765-4362', 'quiteria.junqueira@gmail.com'),
+('Rafaela Joana Kiffer', '44345678923', '2005-06-13', '(41) 98765-4363', 'rafaela.kiffer@gmail.com'),
+('Sandro Luís Monteiro', '45345678924', '1991-11-26', '(41) 98765-4364', 'sandro.monteiro@gmail.com'),
+('Teresa Mariana Nogueira', '46345678925', '1984-04-09', '(41) 98765-4365', 'teresa.nogueira@gmail.com'),
+('Ulisses Natan Oliveira', '47345678926', '2000-09-22', '(41) 98765-4366', 'ulisses.oliveira@gmail.com'),
+('Vera Lúcia Pacheco', '48345678927', '1997-02-05', '(41) 98765-4367', 'vera.pacheco@gmail.com'),
+('Wanderley Marcos Queiroz', '49345678928', '1982-07-18', '(41) 98765-4368', 'wanderley.queiroz@gmail.com'),
+('Xênia Nair Reis', '50345678929', '2006-12-01', '(41) 98765-4369', 'xenia.reis@gmail.com'),
+('Yuri Otávio Silva', '51345678930', '1978-05-14', '(41) 98765-4370', 'yuri.silva@gmail.com'),
+
+('Zuleica Patrícia Tavares', '52345678931', '1993-10-27', '(51) 98765-4371', 'zuleica.tavares@gmail.com'),
+('Alice Beatriz Uchôa', '53345678932', '1989-03-10', '(51) 98765-4372', 'alice.uchoa@gmail.com'),
+('Bernardo César Viana', '54345678933', '2002-08-23', '(51) 98765-4373', 'bernardo.viana@gmail.com'),
+('Clarice Débora Wanderley', '55345678934', '1995-01-06', '(51) 98765-4374', 'clarice.wanderley@gmail.com'),
+('Davi Eduardo Xavier', '56345678935', '1980-06-19', '(51) 98765-4375', 'davi.xavier@gmail.com'),
+('Elaine Fátima Yung', '57345678936', '2004-11-02', '(51) 98765-4376', 'elaine.yung@gmail.com'),
+('Fábio Gabriel Zanetti', '58345678937', '1998-04-15', '(51) 98765-4377', 'fabio.zanetti@gmail.com'),
+('Giovana Helena Andrade', '59345678938', '1983-09-28', '(51) 98765-4378', 'giovana.andrade@gmail.com'),
+('Heitor Inácio Brito', '60345678939', '2007-02-11', '(51) 98765-4379', 'heitor.brito@gmail.com'),
+('Isabela Joana Castro', '61345678940', '1977-07-24', '(51) 98765-4380', 'isabela.castro@gmail.com'),
+
+('João Kleber Dias', '62345678941', '1992-12-07', '(61) 98765-4381', 'joao.dias@gmail.com'),
+('Karina Lúcia Esteves', '63345678942', '1986-05-20', '(61) 98765-4382', 'karina.esteves@gmail.com'),
+('Leandro Miguel Farias', '64345678943', '2001-10-03', '(61) 98765-4383', 'leandro.farias@gmail.com'),
+('Marina Nair Gomes', '65345678944', '1996-03-16', '(61) 98765-4384', 'marina.gomes@gmail.com'),
+('Norberto Oscar Henriques', '66345678945', '1981-08-29', '(61) 98765-4385', 'norberto.henriques@gmail.com'),
+('Olívia Patrícia Inácio', '67345678946', '2005-01-12', '(61) 98765-4386', 'olivia.inacio@gmail.com'),
+('Paulo Quintino Junqueira', '68345678947', '1999-06-25', '(61) 98765-4387', 'paulo.junqueira@gmail.com'),
+('Queila Regina Kiffer', '69345678948', '1984-11-08', '(61) 98765-4388', 'queila.kiffer@gmail.com'),
+('Rogério Samuel Lemos', '70345678949', '2000-04-21', '(61) 98765-4389', 'rogerio.lemos@gmail.com'),
+('Sara Tatiana Monteiro', '71345678950', '1978-09-04', '(61) 98765-4390', 'sara.monteiro@gmail.com'),
+
+('Thiago Umberto Nogueira', '72345678951', '1993-02-17', '(71) 98765-4391', 'thiago.nogueira@gmail.com'),
+('Úrsula Vanessa Oliveira', '73345678952', '1987-07-30', '(71) 98765-4392', 'ursula.oliveira@gmail.com'),
+('Vicente Wilson Pacheco', '74345678953', '2002-12-13', '(71) 98765-4393', 'vicente.pacheco@gmail.com'),
+('Wanessa Ximena Queiroz', '75345678954', '1997-05-26', '(71) 98765-4394', 'wanessa.queiroz@gmail.com'),
+('Xavier Yago Reis', '76345678955', '1982-10-09', '(71) 98765-4395', 'xavier.reis@gmail.com'),
+('Yasmin Zuleica Silva', '77345678956', '2006-03-22', '(71) 98765-4396', 'yasmin.silva@gmail.com'),
+('Zacarias Arnaldo Tavares', '78345678957', '1991-08-05', '(71) 98765-4397', 'zacarias.tavares@gmail.com'),
+('Amanda Beatriz Uchôa', '79345678958', '1985-01-18', '(71) 98765-4398', 'amanda.uchoa@gmail.com'),
+('Breno César Viana', '80345678959', '2000-06-01', '(71) 98765-4399', 'breno.viana@gmail.com'),
+('Cecília Débora Wanderley', '81345678960', '1976-11-14', '(71) 98765-4400', 'cecilia.wanderley@gmail.com'),
+
+('Daniel Eduardo Xavier', '82345678961', '1995-04-27', '(81) 98765-4401', 'daniel.xavier@gmail.com'),
+('Elisa Fátima Yung', '83345678962', '1989-09-10', '(81) 98765-4402', 'elisa.yung@gmail.com'),
+('Felipe Gabriel Zanetti', '84345678963', '2004-02-23', '(81) 98765-4403', 'felipe.zanetti@gmail.com'),
+('Gabriela Helena Andrade', '85345678964', '1998-07-06', '(81) 98765-4404', 'gabriela.andrade@gmail.com'),
+('Henrique Inácio Brito', '86345678965', '1983-12-19', '(81) 98765-4405', 'henrique.brito@gmail.com'),
+('Isadora Joana Castro', '87345678966', '2007-05-02', '(81) 98765-4406', 'isadora.castro@gmail.com'),
+('João Pedro Dias', '88345678967', '1979-10-15', '(81) 98765-4407', 'joaopedro.dias@gmail.com'),
+('Karen Lúcia Esteves', '89345678968', '1994-03-28', '(81) 98765-4408', 'karen.esteves@gmail.com'),
+('Lucas Miguel Farias', '90345678969', '1988-08-11', '(81) 98765-4409', 'lucas.farias@gmail.com'),
+('Mariana Nair Gomes', '91345678970', '2003-01-24', '(81) 98765-4410', 'mariana.gomes@gmail.com'),
+
+('Nícolas Oscar Henriques', '92345678971', '1997-06-07', '(85) 98765-4411', 'nicolas.henriques@gmail.com'),
+('Olga Patrícia Inácio', '93345678972', '1982-11-20', '(85) 98765-4412', 'olga.inacio@gmail.com'),
+('Paulo Ricardo Junqueira', '94345678973', '2005-04-03', '(85) 98765-4413', 'pauloricardo.junqueira@gmail.com'),
+('Quezia Regina Kiffer', '95345678974', '1990-09-16', '(85) 98765-4414', 'quezia.kiffer@gmail.com'),
+('Rafael Samuel Lemos', '96345678975', '1985-02-28', '(85) 98765-4415', 'rafael.lemos@gmail.com'),
+('Sabrina Tatiana Monteiro', '97345678976', '2000-07-12', '(85) 98765-4416', 'sabrina.monteiro@gmail.com'),
+('Thales Umberto Nogueira', '98345678977', '1977-12-25', '(85) 98765-4417', 'thales.nogueira@gmail.com'),
+('Úrsula Vanessa Oliveira', '99345678978', '1992-05-08', '(85) 98765-4418', 'ursula2.oliveira@gmail.com'),
+('Vinícius Wilson Pacheco', '00345678979', '1986-10-21', '(85) 98765-4419', 'vinicius.pacheco@gmail.com'),
+('Waleska Ximena Queiroz', '11345678980', '2001-03-04', '(85) 98765-4420', 'waleska.queiroz@gmail.com');
+
+-- Inserção de vendas
+INSERT INTO venda (id, data_venda, id_cliente, id_funcionario, id_loja, valor_total, forma_pagamento) VALUES
+(1, '2022-01-15 08:30:00', 23, 45, 12, 58.60, 'PIX'),
+(2, '2022-02-20 10:15:00', 67, 12, 35, 33.50, 'CARTAO_CREDITO'),
+(3, '2022-03-10 14:45:00', 5, 78, 8, 50.40, 'CARTAO_DEBITO'),
+(4, '2022-04-05 16:20:00', 89, 33, 42, 202.30, 'PIX'),
+(5, '2022-05-18 11:30:00', 14, 56, 19, 49.70, 'DINHEIRO'),
+(6, '2022-06-22 09:45:00', 72, 89, 5, 45.90, 'PIX'),
+(7, '2022-07-30 13:10:00', 31, 4, 27, 110.90, 'CARTAO_CREDITO'),
+(8, '2022-08-12 17:25:00', 98, 67, 33, 128.40, 'CARTAO_DEBITO'),
+(9, '2022-09-05 15:50:00', 45, 22, 14, 43.30, 'PIX'),
+(10, '2022-10-19 12:05:00', 12, 91, 48, 104.80, 'DINHEIRO'),
+(11, '2022-11-25 10:30:00', 76, 15, 7, 201.70, 'CARTAO_CREDITO'),
+(12, '2022-12-10 18:15:00', 53, 38, 21, 39.40, 'PIX'),
+(13, '2023-01-15 09:20:00', 34, 72, 36, 150.70, 'CARTAO_DEBITO'),
+(14, '2023-02-28 14:40:00', 81, 49, 9, 29.80, 'PIX'),
+(15, '2023-03-17 16:55:00', 27, 83, 17, 179.80, 'DINHEIRO'),
+(16, '2023-04-03 11:10:00', 62, 6, 44, 629.70, 'CARTAO_CREDITO'),
+(17, '2023-05-22 13:25:00', 19, 94, 3, 779.70, 'PIX'),
+(18, '2023-06-14 15:40:00', 48, 27, 28, 62.40, 'CARTAO_DEBITO'),
+(19, '2023-07-08 17:55:00', 95, 61, 39, 52.50, 'DINHEIRO'),
+(20, '2023-08-19 10:10:00', 3, 44, 11, 102.80, 'PIX'),
+(21, '2023-09-11 12:25:00', 71, 17, 23, 52.30, 'CARTAO_CREDITO'),
+(22, '2023-10-05 14:40:00', 56, 79, 31, 35.40, 'CARTAO_DEBITO'),
+(23, '2023-11-20 16:55:00', 22, 3, 45, 83.70, 'PIX'),
+(24, '2023-12-15 19:10:00', 87, 52, 16, 42.90, 'DINHEIRO'),
+(25, '2024-01-10 08:25:00', 41, 88, 2, 166.40, 'CARTAO_CREDITO'),
+(26, '2024-02-14 10:40:00', 68, 35, 24, 88.30, 'PIX'),
+(27, '2024-03-08 12:55:00', 13, 69, 37, 151.80, 'CARTAO_DEBITO'),
+(28, '2024-04-22 15:10:00', 94, 11, 49, 37.80, 'DINHEIRO'),
+(29, '2024-05-17 17:25:00', 29, 74, 6, 181.80, 'PIX'),
+(30, '2024-06-05 19:40:00', 77, 23, 18, 47.40, 'CARTAO_CREDITO'),
+(31, '2024-07-19 08:55:00', 4, 96, 41, 36.80, 'CARTAO_DEBITO'),
+(32, '2024-08-12 11:10:00', 63, 5, 29, 45.70, 'PIX'),
+(33, '2024-09-25 13:25:00', 35, 48, 10, 161.60, 'DINHEIRO'),
+(34, '2024-10-10 15:40:00', 82, 19, 32, 58.70, 'CARTAO_CREDITO'),
+(35, '2024-11-15 17:55:00', 17, 62, 43, 155.70, 'PIX'),
+(36, '2024-12-03 20:10:00', 54, 37, 25, 37.30, 'CARTAO_DEBITO'),
+(37, '2025-01-18 09:25:00', 91, 84, 1, 419.70, 'DINHEIRO'),
+(38, '2025-02-22 11:40:00', 26, 7, 38, 34.70, 'PIX'),
+(39, '2025-03-14 13:55:00', 73, 41, 20, 52.20, 'CARTAO_CREDITO'),
+(40, '2025-04-05 16:10:00', 38, 93, 47, 219.20, 'CARTAO_DEBITO'),
+(41, '2025-01-10 18:25:00', 15, 26, 13, 31.70, 'PIX'),
+(42, '2025-02-15 20:40:00', 64, 59, 30, 171.60, 'DINHEIRO'),
+(43, '2025-03-20 09:55:00', 47, 2, 40, 42.90, 'CARTAO_CREDITO'),
+(44, '2025-04-25 12:10:00', 83, 65, 4, 145.70, 'PIX'),
+(45, '2025-01-05 14:25:00', 32, 18, 22, 59.30, 'CARTAO_DEBITO'),
+(46, '2025-02-08 16:40:00', 69, 81, 34, 112.90, 'DINHEIRO'),
+(47, '2025-03-12 18:55:00', 8, 34, 26, 166.40, 'PIX'),
+(48, '2025-04-18 21:10:00', 55, 77, 15, 30.30, 'CARTAO_CREDITO'),
+(49, '2025-01-22 08:25:00', 96, 9, 46, 204.70, 'CARTAO_DEBITO'),
+(50, '2025-02-25 09:30:00', 37, 28, 50, 89.50, 'PIX');
+
+-- Now you can safely insert item_venda records (including those referencing ID 50)
+
+-- Inserção de itens de venda
+INSERT INTO item_venda (id_venda, id_produto, quantidade, preco_unitario, desconto) VALUES
+(1, 3, 2, 18.90, 0.00),
+(1, 12, 1, 8.90, 0.50),
+(1, 15, 1, 12.90, 0.00),
+
+(2, 5, 1, 14.50, 0.00),
+(2, 22, 2, 9.50, 0.00),
+
+(3, 7, 1, 16.50, 0.00),
+(3, 14, 1, 11.50, 0.00),
+(3, 18, 1, 19.50, 1.00),
+(3, 25, 1, 4.90, 0.00),
+
+(4, 2, 1, 36.50, 0.00),
+(4, 35, 1, 129.90, 10.00),
+(4, 40, 1, 45.90, 0.00),
+
+(5, 9, 2, 17.50, 0.00),
+(5, 16, 3, 7.90, 0.00),
+
+(6, 11, 1, 14.50, 0.00),
+(6, 19, 1, 24.50, 0.00),
+(6, 28, 1, 6.90, 0.00),
+
+(7, 6, 1, 20.50, 0.00),
+(7, 13, 2, 6.50, 0.00),
+(7, 21, 1, 12.50, 0.00),
+(7, 30, 1, 65.90, 5.00),
+
+(8, 4, 1, 38.90, 0.00),
+(8, 38, 1, 89.50, 0.00),
+
+(9, 8, 1, 10.90, 0.00),
+(9, 17, 1, 18.90, 0.00),
+(9, 26, 1, 13.50, 0.00),
+
+(10, 1, 1, 32.90, 0.00),
+(10, 10, 1, 12.90, 0.00),
+(10, 20, 1, 13.50, 0.00),
+(10, 29, 1, 45.50, 0.00),
+
+(11, 23, 2, 11.90, 0.00),
+(11, 31, 1, 89.90, 5.00),
+(11, 37, 1, 119.90, 0.00),
+
+(12, 24, 1, 22.90, 0.00),
+(12, 27, 1, 16.50, 0.00),
+
+(13, 32, 1, 45.90, 0.00),
+(13, 33, 1, 32.90, 0.00),
+(13, 36, 1, 49.90, 0.00),
+(13, 39, 1, 32.50, 0.00),
+
+(14, 34, 2, 29.90, 0.00),
+(14, 41, 1, 399.90, 20.00),
+(14, 44, 1, 39.90, 0.00),
+
+(15, 42, 1, 89.90, 0.00),
+(15, 45, 1, 89.90, 0.00),
+
+(16, 43, 1, 79.90, 0.00),
+(16, 46, 1, 499.90, 50.00),
+(16, 47, 1, 199.90, 0.00),
+
+(17, 48, 1, 349.90, 0.00),
+(17, 49, 1, 129.90, 0.00),
+(17, 50, 1, 159.90, 10.00),
+(17, 3, 1, 18.90, 0.00),
+
+(18, 5, 2, 15.90, 0.00),
+(18, 12, 3, 8.90, 0.00),
+
+(19, 7, 1, 16.50, 0.00),
+(19, 14, 1, 11.50, 0.00),
+(19, 21, 2, 12.50, 0.00),
+
+(20, 9, 1, 17.50, 0.00),
+(20, 16, 2, 7.90, 0.00),
+(20, 23, 1, 11.90, 0.00),
+(20, 30, 1, 65.90, 0.00),
+
+(21, 4, 1, 38.90, 0.00),
+(21, 13, 2, 6.50, 0.00),
+(21, 28, 1, 6.90, 0.00),
+
+(22, 8, 1, 10.90, 0.00),
+(22, 19, 1, 24.50, 0.00),
+
+(23, 11, 1, 14.50, 0.00),
+(23, 17, 1, 18.90, 0.00),
+(23, 25, 2, 4.90, 0.00),
+(23, 32, 1, 45.90, 0.00),
+
+(24, 6, 1, 20.50, 0.00),
+(24, 15, 1, 12.90, 0.00),
+(24, 22, 1, 9.50, 0.00),
+
+(25, 2, 1, 36.50, 0.00),
+(25, 35, 1, 129.90, 0.00),
+
+(26, 10, 1, 12.90, 0.00),
+(26, 18, 1, 19.50, 0.00),
+(26, 29, 1, 45.50, 0.00),
+
+(27, 1, 1, 32.90, 0.00),
+(27, 20, 1, 13.50, 0.00),
+(27, 26, 1, 13.50, 0.00),
+(27, 31, 1, 89.90, 0.00),
+
+(28, 3, 2, 18.90, 0.00),
+(28, 12, 1, 8.90, 0.00),
+
+(29, 5, 1, 15.90, 0.00),
+(29, 16, 3, 7.90, 0.00),
+(29, 24, 1, 22.90, 0.00),
+
+(30, 7, 1, 16.50, 0.00),
+(30, 14, 1, 11.50, 0.00),
+(30, 21, 1, 12.50, 0.00),
+(30, 28, 1, 6.90, 0.00),
+
+(31, 9, 1, 17.50, 0.00),
+(31, 22, 2, 9.50, 0.00),
+
+(32, 11, 1, 14.50, 0.00),
+(32, 19, 1, 24.50, 0.00),
+(32, 30, 1, 65.90, 0.00),
+
+(33, 4, 1, 38.90, 0.00),
+(33, 13, 2, 6.50, 0.00),
+(33, 23, 1, 11.90, 0.00),
+(33, 33, 1, 32.90, 0.00),
+
+(34, 8, 1, 10.90, 0.00),
+(34, 17, 1, 18.90, 0.00),
+
+(35, 10, 1, 12.90, 0.00),
+(35, 18, 1, 19.50, 0.00),
+(35, 25, 2, 4.90, 0.00),
+
+(36, 2, 1, 36.50, 0.00),
+(36, 35, 1, 129.90, 0.00),
+
+(37, 6, 1, 20.50, 0.00),
+(37, 15, 1, 12.90, 0.00),
+(37, 27, 1, 16.50, 0.00),
+
+(38, 1, 1, 32.90, 0.00),
+(38, 20, 1, 13.50, 0.00),
+(38, 26, 1, 13.50, 0.00),
+(38, 31, 1, 89.90, 0.00),
+
+(39, 3, 2, 18.90, 0.00),
+(39, 12, 1, 8.90, 0.00),
+
+(40, 5, 1, 15.90, 0.00),
+(40, 16, 3, 7.90, 0.00),
+(40, 24, 1, 22.90, 0.00),
+
+(41, 5, 1, 15.90, 0.00),
+(41, 12, 2, 8.90, 0.00),
+(41, 28, 1, 6.90, 0.00),
+
+(42, 8, 1, 10.90, 0.00),
+(42, 17, 1, 18.90, 1.00),
+(42, 23, 1, 11.90, 0.00),
+(42, 35, 1, 129.90, 10.00),
+
+(43, 3, 1, 18.90, 0.00),
+(43, 14, 1, 11.50, 0.00),
+(43, 21, 1, 12.50, 0.00),
+
+(44, 7, 1, 16.50, 0.00),
+(44, 13, 2, 6.50, 0.00),
+(44, 19, 1, 24.50, 0.00),
+(44, 30, 1, 65.90, 5.00),
+
+(45, 9, 1, 17.50, 0.00),
+(45, 16, 2, 7.90, 0.00),
+(45, 25, 1, 4.90, 0.00),
+
+(46, 2, 1, 36.50, 0.00),
+(46, 11, 1, 14.50, 0.00),
+(46, 20, 1, 13.50, 0.00),
+(46, 29, 1, 45.50, 0.00),
+
+(47, 4, 1, 38.90, 0.00),
+(47, 15, 1, 12.90, 0.00),
+(47, 22, 1, 9.50, 0.00),
+
+(48, 6, 1, 20.50, 0.00),
+(48, 10, 1, 12.90, 0.00),
+(48, 18, 1, 19.50, 0.00),
+(48, 27, 1, 16.50, 0.00),
+
+(49, 1, 1, 32.90, 0.00),
+(49, 24, 1, 22.90, 0.00),
+(49, 31, 1, 89.90, 5.00),
+
+(50, 26, 1, 13.50, 0.00),
+(50, 32, 1, 45.90, 0.00),
+(50, 37, 1, 119.90, 10.00),
+(50, 40, 1, 45.90, 0.00);
