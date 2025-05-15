@@ -25,6 +25,8 @@ CREATE TABLE funcionario (
     id_cargo INT,
     id_loja INT NOT NULL,
     data_admissao DATE,
+    telefone VARCHAR(15),
+    email VARCHAR(100),
     FOREIGN KEY (id_cargo) REFERENCES cargo(id),
     FOREIGN KEY (id_loja) REFERENCES loja(id)
 );
