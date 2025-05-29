@@ -16,13 +16,14 @@ CREATE TABLE dim_data_venda (
 CREATE TABLE dim_item_venda (
     id INT AUTO_INCREMENT PRIMARY KEY,
     descricao VARCHAR(100) NOT NULL,
-    categoria VARCHAR(50),  -- Adicionado
+    categoria VARCHAR(50),
     preco_unitario DECIMAL(10, 2) NOT NULL
 );
 
 -- Tabela Dimensão de Local
 CREATE TABLE dim_local_venda (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
     cidade VARCHAR(100) NOT NULL,
     estado CHAR(2) NOT NULL
 );
