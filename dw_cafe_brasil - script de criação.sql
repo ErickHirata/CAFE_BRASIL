@@ -54,7 +54,6 @@ CREATE TABLE fato_vendas (
     id_cliente INT NOT NULL,
     quantidade INT NOT NULL,
     valor_total DECIMAL(12, 2) NOT NULL,
-    PRIMARY KEY (id_data, id_item, id_local, id_responsavel, id_cliente),
     FOREIGN KEY (id_data) REFERENCES dim_data_venda(id),
     FOREIGN KEY (id_item) REFERENCES dim_item_venda(id),
     FOREIGN KEY (id_local) REFERENCES dim_local_venda(id),
