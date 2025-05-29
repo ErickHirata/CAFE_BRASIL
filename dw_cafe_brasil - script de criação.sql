@@ -33,7 +33,7 @@ CREATE TABLE dim_responsavel_venda (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cpf CHAR(11) NOT NULL,
-    cargo VARCHAR(50)  -- Adicionado
+    cargo VARCHAR(50)
 );
 
 -- Tabela Dimensão de Cliente
@@ -41,11 +41,12 @@ CREATE TABLE dim_cliente (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cpf CHAR(11) NOT NULL,
-    idade INT NOT NULL  -- Adicionado
+    idade INT NOT NULL
 );
 
 -- Tabela Fato de Vendas
 CREATE TABLE fato_vendas (
+	id INT AUTO_INCREMENT PRIMARY KEY,
     id_data INT NOT NULL,
     id_item INT NOT NULL,
     id_local INT NOT NULL,
