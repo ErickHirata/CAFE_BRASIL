@@ -4,7 +4,7 @@ USE dw_cafe_brasil;
 
 -- Tabela Dimensão de Data
 CREATE TABLE dim_data_venda (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY NOT NULL,
     data DATE NOT NULL,
     dia INT NOT NULL,
     mes VARCHAR(30) NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE dim_data_venda (
 
 -- Tabela Dimensão de Item
 CREATE TABLE dim_item_venda (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY NOT NULL,
     descricao VARCHAR(100) NOT NULL,
     categoria VARCHAR(50),
     preco_unitario DECIMAL(10, 2) NOT NULL
@@ -22,7 +22,7 @@ CREATE TABLE dim_item_venda (
 
 -- Tabela Dimensão de Local
 CREATE TABLE dim_local_venda (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY NOT NULL,
     nome VARCHAR(100) NOT NULL,
     cidade VARCHAR(100) NOT NULL,
     estado CHAR(2) NOT NULL
@@ -30,7 +30,7 @@ CREATE TABLE dim_local_venda (
 
 -- Tabela Dimensão de Responsável
 CREATE TABLE dim_responsavel_venda (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY NOT NULL,
     nome VARCHAR(100) NOT NULL,
     cpf CHAR(11) NOT NULL,
     cargo VARCHAR(50)
@@ -38,7 +38,7 @@ CREATE TABLE dim_responsavel_venda (
 
 -- Tabela Dimensão de Cliente
 CREATE TABLE dim_cliente (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY NOT NULL,
     nome VARCHAR(100) NOT NULL,
     cpf CHAR(11) NOT NULL,
     idade INT NOT NULL
@@ -46,7 +46,7 @@ CREATE TABLE dim_cliente (
 
 -- Tabela Fato de Vendas
 CREATE TABLE fato_vendas (
-	id INT AUTO_INCREMENT PRIMARY KEY,
+	id INT PRIMARY KEY NOT NULL,
     id_data INT NOT NULL,
     id_item INT NOT NULL,
     id_local INT NOT NULL,
