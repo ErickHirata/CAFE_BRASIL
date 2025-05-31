@@ -1,0 +1,804 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "dim_data_venda",
+          "mode": "list",
+          "cachedResultName": "dim_data_venda"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        660,
+        0
+      ],
+      "id": "f0018b49-fb7a-4c75-9496-c961d921dd52",
+      "name": "MySQL",
+      "credentials": {
+        "mySql": {
+          "id": "X9TiYiBkWdwX0UBz",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "dim_cliente",
+          "mode": "list",
+          "cachedResultName": "dim_cliente"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        660,
+        200
+      ],
+      "id": "7070cd2e-601d-4542-a7ad-3dfe3d5c3f19",
+      "name": "MySQL1",
+      "credentials": {
+        "mySql": {
+          "id": "X9TiYiBkWdwX0UBz",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fileSelector": "C:/N8N/data.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "70eea592-81ca-4774-9d11-f3b8e5e806da",
+      "name": "Leitura dos Dados de Data.csv"
+    },
+    {
+      "parameters": {
+        "fileSelector": "C:/N8N/cliente.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        200
+      ],
+      "id": "2fae8a88-0703-42f6-914a-2f1b9159fa01",
+      "name": "Leitura dos Dados de Cliente.csv"
+    },
+    {
+      "parameters": {
+        "fileSelector": "C:/N8N/fato.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        400
+      ],
+      "id": "17d03191-1e3e-4524-8abd-a7b649f8b81c",
+      "name": "Leitura dos Dados de Fato.csv"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        220,
+        0
+      ],
+      "id": "4d75dce9-4375-49ba-8829-02279769916a",
+      "name": "Extrai dados Data.csv"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        220,
+        200
+      ],
+      "id": "a308dbe7-d314-43a8-940e-6aec043e1b85",
+      "name": "Extrai dados Cliente.csv"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        220,
+        400
+      ],
+      "id": "4137695f-1d03-40cd-89c2-b7d03e047383",
+      "name": "Extrai dados Fato.csv"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "fato_vendas",
+          "mode": "list",
+          "cachedResultName": "fato_vendas"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        660,
+        400
+      ],
+      "id": "5301ba93-a0e1-4bf1-9414-2a2aa62ce569",
+      "name": "MySQL3",
+      "credentials": {
+        "mySql": {
+          "id": "X9TiYiBkWdwX0UBz",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "dim_item_venda",
+          "mode": "list",
+          "cachedResultName": "dim_item_venda"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        660,
+        600
+      ],
+      "id": "8b1bb70d-4019-42ed-aaa1-0d758ef44d66",
+      "name": "MySQL4",
+      "credentials": {
+        "mySql": {
+          "id": "X9TiYiBkWdwX0UBz",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fileSelector": "C:/N8N/item.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        600
+      ],
+      "id": "7f574419-5989-4870-a1bf-ecfe49b263e3",
+      "name": "Leitura dos Dados de Item.csv"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        220,
+        600
+      ],
+      "id": "5739f233-ac50-4052-a0d0-233aa1d9178e",
+      "name": "Extrai dados Item.csv"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  if (item.json.descricao) {\n    item.json.descricao = item.json.descricao\n      .normalize(\"NFD\")\n      .replace(/[\\u0300-\\u036f]/g, \"\")\n      .replace(/[^\\w\\s]/g, \"\");\n  }\n\n  if (item.json.categoria) {\n    item.json.categoria = item.json.categoria\n      .normalize(\"NFD\")\n      .replace(/[\\u0300-\\u036f]/g, \"\")\n      .replace(/[^\\w\\s]/g, \"\");\n  }\n\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        600
+      ],
+      "id": "24487d6a-f17d-4cf9-8e3f-001bd1229f90",
+      "name": "Code4"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const requiredFields = [\n    'id',\n    'id_data',\n    'id_item',\n    'id_local',\n    'id_responsavel',\n    'id_cliente',\n    'quantidade',\n    'valor_total'\n  ];\n\n  for (const field of requiredFields) {\n    const value = item.json[field];\n\n    // Verifica nulo, undefined ou string vazia\n    if (value === null || value === undefined || value === '') {\n      throw new Error(`Campo obrigatório ausente ou inválido: ${field}`);\n    }\n  }\n\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        400
+      ],
+      "id": "7009e40a-1bd6-496d-862b-59765764c9d5",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  if (item.json.cpf) {\n    let cpf = item.json.cpf.toString().replace(/\\D/g, '').padStart(11, '0');\n\n    if (cpf.length === 11) {\n      item.json.cpf = `${cpf.slice(0, 3)}.${cpf.slice(3, 6)}.${cpf.slice(6, 9)}-${cpf.slice(9, 11)}`;\n    } else {\n      throw new Error(`CPF inválido: ${item.json.cpf}`);\n    }\n  }\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        200
+      ],
+      "id": "ea3f34bc-e434-41ab-a391-90d409c29c34",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const newItem = { ...item.json };\n\n  // Transforma o mês em maiúsculas\n  if (newItem.mes) {\n    newItem.mes = newItem.mes.toUpperCase();\n  }\n\n  return { json: newItem };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        0
+      ],
+      "id": "94ba6a70-ac4c-481e-af8c-cad6a4f6bab2",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "dim_local_venda",
+          "mode": "list",
+          "cachedResultName": "dim_local_venda"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        660,
+        800
+      ],
+      "id": "7a8e03bf-33a4-4699-93cd-34c634ac2e39",
+      "name": "MySQL5",
+      "credentials": {
+        "mySql": {
+          "id": "X9TiYiBkWdwX0UBz",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fileSelector": "C:/N8N/local.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        800
+      ],
+      "id": "e33d38c1-8014-4b90-a32a-6f56c1bf8af2",
+      "name": "Leitura dos Dados de Local.csv"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        220,
+        800
+      ],
+      "id": "a76d7178-d288-4c41-a717-84c71ec2f50c",
+      "name": "Extrai dados Local.csv"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  if (item.json.cidade) {\n    item.json.cidade = item.json.cidade\n      .normalize(\"NFD\")                  // separa os caracteres dos acentos\n      .replace(/[\\u0300-\\u036f]/g, \"\")  // remove os acentos\n      .replace(/[^\\w\\s]/g, \"\");          // remove caracteres especiais (pontuação, símbolos, etc)\n  }\n  return item;\n});\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        800
+      ],
+      "id": "f874afce-38b7-447e-ad18-dabd3c6ea693",
+      "name": "Code5"
+    },
+    {
+      "parameters": {
+        "table": {
+          "__rl": true,
+          "value": "dim_responsavel_venda",
+          "mode": "list",
+          "cachedResultName": "dim_responsavel_venda"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 2.4,
+      "position": [
+        660,
+        1000
+      ],
+      "id": "ec1d14f9-17c6-45d3-9a52-b13c3c937625",
+      "name": "MySQL6",
+      "credentials": {
+        "mySql": {
+          "id": "X9TiYiBkWdwX0UBz",
+          "name": "MySQL account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fileSelector": "C:/N8N/responsavel.csv",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1000
+      ],
+      "id": "3bff1914-02af-4614-ba3d-5cb84af51500",
+      "name": "Leitura dos Dados de Responsavel.csv"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1000
+      ],
+      "id": "256645c2-8d12-472e-a71b-02d72c96f440",
+      "name": "Extrai dados Responsavel.csv"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const newItem = { ...item.json };\n\n  // Formata o CPF para XXX.XXX.XXX-XX (15 caracteres)\n  if (newItem.cpf) {\n    let cpf = newItem.cpf.toString().replace(/\\D/g, '').padStart(11, '0'); // só números\n    if (cpf.length === 11) {\n      newItem.cpf = `${cpf.slice(0,3)}.${cpf.slice(3,6)}.${cpf.slice(6,9)}-${cpf.slice(9)}`;\n    } else {\n      throw new Error(`CPF inválido: ${newItem.cpf}`);\n    }\n  }\n\n  // Remove acentos do nome e converte para maiúsculas\n  if (newItem.nome) {\n    newItem.nome = newItem.nome\n      .normalize(\"NFD\")\n      .replace(/[\\u0300-\\u036f]/g, \"\")\n      .toUpperCase();\n  }\n\n  return { json: newItem };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        1000
+      ],
+      "id": "6dc2a3ad-2b5e-4917-a5bc-49be1f662e49",
+      "name": "Code6"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -220,
+        1920
+      ],
+      "id": "dd192051-14fe-4e1e-b403-b11d519b44b5",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -200,
+        0
+      ],
+      "id": "ae241e85-848d-408d-a110-fce636a98bb7",
+      "name": "Schedule Trigger1"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -200,
+        200
+      ],
+      "id": "82dea3ff-8ee2-41d1-b197-640ba252e14f",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -200,
+        400
+      ],
+      "id": "d8181cf7-251a-46dd-952b-3878f7e7eda8",
+      "name": "Schedule Trigger2"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -200,
+        600
+      ],
+      "id": "c16789c8-2578-40ef-90a3-0069abe5fce5",
+      "name": "Schedule Trigger3"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -200,
+        800
+      ],
+      "id": "c5466e28-bbd5-4cf6-bdeb-a74cf325fa07",
+      "name": "Schedule Trigger4"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds",
+              "secondsInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -200,
+        1000
+      ],
+      "id": "149c3fe1-df66-4b9d-bf9c-233a5eb2459f",
+      "name": "Schedule Trigger5"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Leitura dos Dados de Data.csv": {
+      "main": [
+        [
+          {
+            "node": "Extrai dados Data.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leitura dos Dados de Cliente.csv": {
+      "main": [
+        [
+          {
+            "node": "Extrai dados Cliente.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leitura dos Dados de Fato.csv": {
+      "main": [
+        [
+          {
+            "node": "Extrai dados Fato.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrai dados Data.csv": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrai dados Cliente.csv": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrai dados Fato.csv": {
+      "main": [
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leitura dos Dados de Item.csv": {
+      "main": [
+        [
+          {
+            "node": "Extrai dados Item.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrai dados Item.csv": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "MySQL4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "MySQL3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "MySQL1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "MySQL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leitura dos Dados de Local.csv": {
+      "main": [
+        [
+          {
+            "node": "Extrai dados Local.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrai dados Local.csv": {
+      "main": [
+        [
+          {
+            "node": "Code5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code5": {
+      "main": [
+        [
+          {
+            "node": "MySQL5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leitura dos Dados de Responsavel.csv": {
+      "main": [
+        [
+          {
+            "node": "Extrai dados Responsavel.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrai dados Responsavel.csv": {
+      "main": [
+        [
+          {
+            "node": "Code6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code6": {
+      "main": [
+        [
+          {
+            "node": "MySQL6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Leitura dos Dados de Data.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Leitura dos Dados de Cliente.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger2": {
+      "main": [
+        [
+          {
+            "node": "Leitura dos Dados de Fato.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger3": {
+      "main": [
+        [
+          {
+            "node": "Leitura dos Dados de Item.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger4": {
+      "main": [
+        [
+          {
+            "node": "Leitura dos Dados de Local.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger5": {
+      "main": [
+        [
+          {
+            "node": "Leitura dos Dados de Responsavel.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "426e0a5f-5ee5-4cee-9beb-f9a09338cca7",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "c52baf9444f27d3adce5ea48c866fcb2a3429ddeff6a02a1e85001f6450da048"
+  },
+  "id": "CxMwuEclGY45pNoq",
+  "tags": []
+}
