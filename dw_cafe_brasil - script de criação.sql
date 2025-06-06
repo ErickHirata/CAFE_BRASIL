@@ -32,7 +32,7 @@ CREATE TABLE dim_local_venda (
 CREATE TABLE dim_responsavel_venda (
     id INT PRIMARY KEY NOT NULL,
     nome VARCHAR(100) NOT NULL,
-    cpf CHAR(11) NOT NULL,
+    cpf VARCHAR(15) NOT NULL,
     cargo VARCHAR(50)
 );
 
